@@ -10,4 +10,8 @@ private:
 
 };
 
+class RField:public Field{
+
+};
+
 #endif

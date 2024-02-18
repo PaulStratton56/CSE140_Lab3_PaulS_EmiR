@@ -11,6 +11,9 @@
     Used to upcast any kind of field to be stored in a pointer inside an Instruction object. */
 class Field{
 public:
+    /* == printInfo ==
+        Prints the values of each child class's field, plus operation and instruction type.
+        Abstract method in Field class. */
     virtual void printInfo() = 0;
 
 protected:

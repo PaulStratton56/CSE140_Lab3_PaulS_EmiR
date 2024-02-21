@@ -1,10 +1,12 @@
-#include <iostream>
-#include <vector>
-#include <cmath>
-#include <string>
-#include "fields.h"
+//IMPORTANT: Testing file, please ignore and compile TRANSLATE.CPP. Thank you!
 
-using namespace std;
+// #include <iostream>
+// #include <vector>
+// #include <cmath>
+// #include <string>
+// #include "fields.h"
+
+// using namespace std;
 
 /* == binToInt ==
     Input:
@@ -72,53 +74,53 @@ using namespace std;
         
     Description:
         Takes in a string of binary digits, and populates an integer vector representing the binary code.*/
-vector<int> strToVec(string binary){
-    vector<int> result;
-    for(int i = 0; i < binary.length(); i++){
-        result.push_back((int)(binary[binary.length()-(i+1)])-48);
-    }
-    return result;
-}
+// vector<int> strToVec(string binary){
+//     vector<int> result;
+//     for(int i = 0; i < binary.length(); i++){
+//         result.push_back((int)(binary[binary.length()-(i+1)])-48);
+//     }
+//     return result;
+// }
 
 // Putting it all together!
-int main(){
-    vector<string> codes = {
-        "01000000001000001000000110110011", //R-Type
-        "00000000101001100111011010010011", //I-Type
-        "11111110001100100000100000100011", //S-Type
-        "11111110001000001001111011100011", //SB-Type
-        "00000000101000000000000011101111"  //UJ-Type
-    };
+// int main(){
+//     vector<string> codes = {
+//         "01000000001000001000000110110011", //R-Type
+//         "00000000101001100111011010010011", //I-Type
+//         "11111110001100100000100000100011", //S-Type
+//         "11111110001000001001111011100011", //SB-Type
+//         "00000000101000000000000011101111"  //UJ-Type
+//     };
 
-    vector<int> myVals;
-    Field* myField;
+//     vector<int> myVals;
+//     Field* myField;
 
-    for(int i=0; i < codes.size(); i++){
-        myVals = strToVec(codes[i]);
-        cout << "- - -~~===oO00{O}0O0o===~~- - -" << endl;
-        switch(i){
-            case(0):
-                myField = new RField(myVals);
-                break;
-            case(1):
-                myField = new IField(myVals);
-                break;
-            case(2):
-                myField = new SField(myVals);
-                break;
-            case(3):
-                myField = new SBField(myVals);
-                break;
-            case(4):
-                myField = new UJField(myVals);
-                break;
-        }   
-        cout << codes[i] << endl;
-        myField->printInfo();
-        delete myField;
-    }
+//     for(int i=0; i < codes.size(); i++){
+//         myVals = strToVec(codes[i]);
+//         cout << "- - -~~===oO00{O}0O0o===~~- - -" << endl;
+//         switch(i){
+//             case(0):
+//                 myField = new RField(myVals);
+//                 break;
+//             case(1):
+//                 myField = new IField(myVals);
+//                 break;
+//             case(2):
+//                 myField = new SField(myVals);
+//                 break;
+//             case(3):
+//                 myField = new SBField(myVals);
+//                 break;
+//             case(4):
+//                 myField = new UJField(myVals);
+//                 break;
+//         }   
+//         cout << codes[i] << endl;
+//         myField->printInfo();
+//         delete myField;
+//     }
 
-}
+// }
 
 //Testing binToInt, strToVec
 // int main(){
